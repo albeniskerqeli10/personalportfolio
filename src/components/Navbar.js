@@ -5,16 +5,16 @@ import avatar from "../assets/images/avatar.webp";
 const navLinks = [
   {
     name: "Home",
-    path: "/",
+    path: "#",
   },
   {
     name: "About",
-    path: "/about",
+    path: "#about",
   },
 
   {
     name: "Projects",
-    path: "/projects",
+    path: "#projects",
   },
 ];
 
@@ -38,12 +38,15 @@ const Navbar = () => {
         <nav
           className={toggle ? "header__nav header__nav__show" : "header__nav"}
         >
-          {navLinks.map(({ name, path }) => (
-            <li>
+          {navLinks.map(({ name, path }, i) => (
+            <li key={i}>
               <a href={path}>{name}</a>
             </li>
           ))}
-          <a href="/" className="header__cta">
+          <a
+            href="https://drive.google.com/file/d/1gvPiSnOnfUD4YRxtfgftwoDfNfCUse9e/view"
+            className="header__cta"
+          >
             Resume
           </a>
         </nav>

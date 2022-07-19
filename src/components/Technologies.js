@@ -51,9 +51,9 @@ const Technologies = () => {
           Some other technologies I have been using recently:
         </h2>
         <div className="technologies__skills">
-          {technologies.map((tech) => (
-            <div className="technologies__skills__item">
-              <img src={tech.path} alt={tech.name} />
+          {technologies.map((tech, i) => (
+            <div key={i} className="technologies__skills__item">
+              <img loading="lazy" src={tech.path} alt={tech.name} />
               <h4>{tech.name}</h4>
             </div>
           ))}

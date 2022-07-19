@@ -3,7 +3,6 @@ import Project from "./UI/Project";
 import "../styles/Projects.css";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  console.log(projects);
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -23,12 +22,12 @@ const Projects = () => {
     fetchProjects();
   }, []);
   return (
-    <section className="projects">
+    <section id="projects" className="projects">
       <div className="projects__container">
         <h1 className="projects__title">Projects</h1>
         <div className="projects__grid">
-          {projects.map((project) => (
-            <Project project={project} />
+          {projects.map((project, i) => (
+            <Project key={i} project={project} />
           ))}
         </div>
       </div>
