@@ -1,12 +1,22 @@
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+
 import "./styles/App.css";
+import Technologies from "./components/Technologies";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Navbar />
-      sd
-    </div>
+      <Hero />
+      <About />
+      <Technologies />
+      <Projects />
+      <Footer />
+    </main>
   );
 }
 

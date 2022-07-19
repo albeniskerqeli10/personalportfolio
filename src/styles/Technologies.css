@@ -1,0 +1,124 @@
+.technologies {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:row;
+    padding:2rem 0;
+    flex-wrap:wrap;
+    
+
+}
+
+.technologies__container {
+    width:100%;
+    max-width: 1320px;
+    padding:0 2rem;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction:column;
+    flex-wrap:wrap;
+}
+
+.ssssss {
+    font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2rem);
+
+    font-weight:bold;
+    margin:0;
+    padding:1rem 0;
+    text-align:center;
+}
+
+.technologies__title {
+    font-size: min(max(1.5rem, -0.875rem + 8.333vw), 2rem);
+     @supports (font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2rem);
+    ) {
+        font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2rem);
+    }
+  }
+
+.technologies__subtitle {
+    font-size:1.1rem;
+    margin:0;
+    color:#5c5c5c;
+    line-height: 1.7;
+    padding:1rem 0;
+}
+
+.technologies__skills {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction:row;
+    padding:1rem 0;    
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.technologies__skills__item {
+    width:250px;
+    display:flex;
+    height:100px;
+
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction:row;
+    gap:30px;
+        flex-wrap:wrap;
+}
+
+.technologies__skills__item img {
+    width:40px;
+    max-width: 100%;
+    object-fit: cover;
+    display:flex;
+    margin:0;
+    object-position: center;
+}
+
+.technologies__skills__item h4 {
+    font-size:1.1rem;
+    color:#2563eb;;
+    padding:10px 0;
+    font-weight:bold;
+}
+
+
+@media screen and (max-width:768px) {
+    .technologies__container {
+        align-items: center;
+        max-width:100%;
+        justify-content:center;
+        max-width:100%;
+        padding:0 1rem;
+    }
+    
+
+    .technologies__title {
+        text-align:center;
+    }
+
+    .technologies__subtitle {
+        font-size:1rem;
+        text-align:center;
+
+    }
+
+    .technologies__skills {
+        align-items:center;
+        justify-content:center;
+    }
+    .technologies__skills__item {
+        width:100%;
+        height:auto;
+        align-items:center;
+        justify-content:center;
+        display:flex;
+        flex-grow:1;
+        flex-direction:column;
+        gap:10px;
+        flex-wrap:wrap;
+    }
+}

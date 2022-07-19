@@ -1,0 +1,15 @@
+.footer {
+    width:100%;
+    min-height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.footer h1 {
+    font-size:1rem;
+    padding:1rem 0;
+    font-weight:bold;
+}

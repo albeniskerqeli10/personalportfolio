@@ -1,0 +1,152 @@
+.hero {
+    width:100%;
+    min-height:80vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.hero__container {
+    width:100%;
+    max-width:1320px;
+    padding:0 1rem;
+    display:flex;
+    gap:10px;
+    justify-content: space-around;
+    align-content:center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+.hero__intro {
+    width:600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin:0 1rem;
+
+}
+
+.hero__intro__title {
+    font-size:3rem;
+    font-weight:bold;
+    margin:0;
+    padding:1rem 0;
+}
+
+.hero__intro strong {
+    font-weight:bold;
+    /* color:#0152CC; */
+}
+
+.hero__intro__text {
+    font-size:1.1rem;
+    margin:0;
+    color:#5c5c5c;
+    line-height: 1.7;
+    padding:1rem 0;
+}
+.hero__intro_buttons {
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:2rem 0;
+    justify-content:flex-start;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+
+.hero__intro__btn {
+    padding:1rem 2rem;
+    background-color:#2563eb;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    border:none;
+    
+}
+
+.btn__outline {
+       padding:1rem 2rem;
+       background-color:transparent;
+       color:#2563eb;
+       font-weight:bold;
+       border:2px solid #2563eb;
+           border-radius:5px;
+}
+
+.hero__image {
+    display:flex;
+    width:600px;
+    align-items:flex-start;
+    justify-content:flex-start;
+     flex-direction:row;
+     margin:0 1rem;
+
+     flex-wrap:wrap;
+}
+
+.hero__image img {
+    width:600px;
+    max-width:100%;
+    height:auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero__container {
+        display:flex;
+        max-width:100%;
+        align-items:center;
+        justify-content:center;
+        
+    }
+
+    .hero__intro {
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:0 0.5rem;
+    }
+    .hero__intro__title {
+        font-size:2rem;
+        font-weight:bold;
+        margin:0;
+        padding:1rem 0;
+        text-align:center;
+    }
+
+.hero__intro__text {
+        font-size:1rem;
+        text-align:center;
+    
+    }
+
+    .hero__intro_buttons {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .hero__image {
+        width:100%;
+        padding:0 0.5rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    
+
+    
+}

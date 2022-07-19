@@ -1,6 +1,7 @@
 import "../styles/Navbar.css";
 import { useState } from "react";
 import { List, X } from "phosphor-react";
+import avatar from "../assets/images/avatar.webp";
 const navLinks = [
   {
     name: "Home",
@@ -15,10 +16,6 @@ const navLinks = [
     name: "Projects",
     path: "/projects",
   },
-  {
-    name: "Contact",
-    path: "/contact",
-  },
 ];
 
 const Navbar = () => {
@@ -29,7 +26,15 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <img className="header__logo" alt="logo" />
+        <div className="header__info">
+          <img
+            src={avatar}
+            loading="lazy"
+            className="header__info__logo"
+            alt="Logo"
+          />
+          <h1 className="header__info__text">Albenis Kerqeli</h1>
+        </div>
         <nav
           className={toggle ? "header__nav header__nav__show" : "header__nav"}
         >
@@ -38,12 +43,10 @@ const Navbar = () => {
               <a href={path}>{name}</a>
             </li>
           ))}
-          asdasdasdasdsavvvvvvvvvv
-          <a href="download.href" className="header__cta">
-            Resumsaakae
+          <a href="/" className="header__cta">
+            Resume
           </a>
         </nav>
-        add
         {toggle ? (
           <X
             size={24}
