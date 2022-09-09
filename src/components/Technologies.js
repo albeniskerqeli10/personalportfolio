@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Technologies.css";
+import styles from "../styles/Technologies.module.css";
 import reduxImg from "../assets/images/redux.png";
 import graphqlImg from "../assets/images/graphql.png";
 import expressjsImg from "../assets/images/expressjs.png";
@@ -44,15 +44,15 @@ const technologies = [
 ];
 const Technologies = () => {
   return (
-    <section className="technologies">
-      <div className="technologies__container">
-        <h1 className="technologies__title">Technologies</h1>
-        <h2 className="technologies__subtitle">
+    <section className={styles.technologies}>
+      <div className={styles.technologies__container}>
+        <h1 className={styles.technologies__title}>Technologies</h1>
+        <h2 className={styles.technologies__subtitle}>
           Some other technologies I have been using recently:
         </h2>
-        <div className="technologies__skills">
+        <div className={styles.technologies__skills}>
           {technologies.map((tech, i) => (
-            <div key={i} className="technologies__skills__item">
+            <div key={i} className={styles.technologies__skills__item}>
               <img loading="lazy" src={tech.path} alt={tech.name} />
               <h4>{tech.name}</h4>
             </div>

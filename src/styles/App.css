@@ -1,9 +1,0 @@
-.App {
-  width:100%;
-  min-height:80vh;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  flex-direction:column;
-  flex-wrap:wrap;
-}

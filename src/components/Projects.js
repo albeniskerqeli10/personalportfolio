@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
-import Project from "./UI/Project";
-import "../styles/Projects.css";
+import { lazy, Suspense, useEffect, useState } from "react";
+import styles from "../styles/Projects.module.css";
+const Project = lazy(() => import("./UI/Project"))
+
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
@@ -22,13 +23,15 @@ const Projects = () => {
     fetchProjects();
   }, []);
   return (
-    <section id="projects" className="projects">
-      <div className="projects__container">
-        <h1 className="projects__title">Projects</h1>
-        <div className="projects__grid">
-          {projects.map((project, i) => (
+    <section id="projects" className={styles.projects}>
+      <div className={styles.projects__container}>
+        <h1 className={styles.projects__title}>Projects</h1>
+        <div className={styles.projects__grid}>
+         <Suspense fallback={<h1>Loading...</h1>}>
+         {projects.map((project, i) => (
             <Project key={i} project={project} />
           ))}
+         </Suspense>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import "../styles/Navbar.css";
+import styles from "../styles/Navbar.module.css";
 import { useState } from "react";
 import { List, X } from "phosphor-react";
 import avatar from "../assets/images/avatar.webp";
@@ -24,19 +24,19 @@ const Navbar = () => {
     setToggle((prevToggle) => !prevToggle);
   };
   return (
-    <header className="header">
-      <div className="header__container">
-        <div className="header__info">
+    <header className={styles.header}>
+      <div className={styles.header__container}>
+        <div className={styles.header__info}>
           <img
             src={avatar}
             loading="lazy"
-            className="header__info__logo"
+            className={styles.header__info__logo}
             alt="Logo"
           />
-          <h1 className="header__info__text">Albenis Kerqeli</h1>
+          <h1 className={styles.header__info__text}>Albenis Kerqeli</h1>
         </div>
         <nav
-          className={toggle ? "header__nav header__nav__show" : "header__nav"}
+          className={toggle ? [styles.header__nav, styles.header__nav__show] : styles.header__nav}
         >
           {navLinks.map(({ name, path }, i) => (
             <li key={i}>
@@ -45,7 +45,7 @@ const Navbar = () => {
           ))}
           <a
             href="https://drive.google.com/file/d/1gvPiSnOnfUD4YRxtfgftwoDfNfCUse9e/view"
-            className="header__cta"
+            className={styles.header__cta}
           >
             Resume
           </a>
@@ -53,14 +53,14 @@ const Navbar = () => {
         {toggle ? (
           <X
             size={24}
-            className="header__toggle"
+            className={styles.header__toggle}
             weight="bold"
             onClick={handleToggle}
           />
         ) : (
           <List
             size={24}
-            className="header__toggle"
+            className={styles.header__toggle}
             weight="bold"
             onClick={handleToggle}
           />
