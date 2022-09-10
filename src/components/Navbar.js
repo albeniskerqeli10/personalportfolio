@@ -29,7 +29,6 @@ const Navbar = () => {
         <div className={styles.header__info}>
           <img
             src={avatar}
-            loading="lazy"
             className={styles.header__info__logo}
             alt="Logo"
           />

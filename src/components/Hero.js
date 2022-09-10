@@ -1,6 +1,7 @@
 import styles from  "../styles/Hero.module.css";
+import { useEffect } from "react";
 const Hero = () => {
-  return (
+ return (
     <section className={styles.hero}>
       <div className={styles.hero__container}>
         <div className={styles.hero__intro}>
